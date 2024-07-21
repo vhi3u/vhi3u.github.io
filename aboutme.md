@@ -7,4 +7,4 @@ I am a third-year undergraduate student at the University of North Carolina at C
 
 Where I plan to intersect these two disciplines is still up for discussion. Ocean modeling? Carbon dioxide removal? Data assimilation? Machine learning? I'll figure it out eventually. 
 
-I'll likely add some other parts of this website for more random stuff unrelated to research or school (music, food, etc.)
+More stuff will be added to this website... 

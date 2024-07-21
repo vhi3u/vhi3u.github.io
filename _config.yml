@@ -17,8 +17,8 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {url: "/assets/cv.pdf", title: "CV"}
-  - {title: "PEACH Gliders"}
-  - {title: "iLOSCAR"}
+  - {title: "PEACH Gliders", file: "peach.md"}
+  - {title: "iLOSCAR", file: "iloscar.md"}
   - {title: "About Me", file: "aboutme.md"}
 
 
