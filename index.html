@@ -12,22 +12,53 @@ title: "Welcome"
   .column {
     flex: 1;
     text-align: center;
+    position: relative;
   }
   .column img {
     width: 350px;
     height: 275px;
+    transition: transform 0.2s; /* Animation */
+  }
+  .column img:hover {
+    transform: scale(1.05); /* Zoom effect */
+  }
+  .column .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .column:hover .caption {
+    opacity: 1;
   }
 </style>
 
 <div class="row">
   <div class="column">
-    <img src="/assets/ramsesGlider.png" alt="Ramses Glider">
+    <a href="peach.md">
+      <img src="/assets/ramsesGlider.png" alt="Ramses Glider">
+      <div class="caption">PEACH</div>
+    </a>
   </div>
   <div class="column">
-    <img src="/assets/ihuron7xmjx01.gif" alt="Ihuron GIF">
+    <a href="aboutme.md">
+      <img src="/assets/ihuron7xmjx01.gif" alt="Ihuron GIF">
+      <div class="caption">About Me</div>
+    </a>
   </div>
   <div class="column">
-    <img src="/assets/loscarFig.png" alt="Loscar Figure">
+    <a href="iloscar.md">
+      <img src="/assets/loscarFig.png" alt="Loscar Figure">
+      <div class="caption">iLOSCAR</div>
+    </a>
   </div>
 </div>
 
