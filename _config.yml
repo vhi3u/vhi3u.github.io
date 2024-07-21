@@ -1,6 +1,6 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
+title: "VHI3U"
+author: "Victor Nguyen"
+description: "University of North Carolina at Chapel Hill"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
