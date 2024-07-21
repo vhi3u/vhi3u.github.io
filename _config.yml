@@ -17,10 +17,10 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "Home", icon: home}
-  - {file: "cv.pdf", title: "CV", icon: home}
-  - {title: "About Me", icon: address-card}
-  - {title: "PEACH Gliders", icon: home}
-  - {title: "iLOSCAR", icon: home}
+  - {file: "/cv.pdf", title: "CV", icon: home}
+  - {title: "About Me"}
+  - {title: "PEACH Gliders"}
+  - {title: "iLOSCAR"}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
