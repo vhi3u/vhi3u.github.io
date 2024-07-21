@@ -7,10 +7,10 @@ I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tar
 
 
 <div style="text-align: center;">
-    <img src="/assets/peachMAP.png" width ="400" height ="300" alt="Schematic representation of Cape Hatteras Region">
-    <figcaption>Schematic representation of circulation patterns in the Cape Hatteras Region</figcaption>
-    <img src="/assets/R6ST.png" width ="400" height="300" alt="Temperature vs. Salinity">
-    <figcaption>Temperature vs. Salinity plot for Ramses Deployment 6</figcaption>
+    <img src="/assets/peachMAP.png" width ="400" height ="300" alt="Schematic representation of Cape Hatteras Region"><br>
+    Schematic representation of circulation patterns in the Cape Hatteras Region
+    <img src="/assets/R6ST.png" width ="400" height="300" alt="Temperature vs. Salinity"><br>
+    Temperature vs. Salinity plot for Ramses Deployment 6
 </div>
 
 [Here](https://github.com/vhi3u/peachVIS) is a link to the GitHub repository of all the figures I've created so far.
