@@ -3,8 +3,10 @@ layout: default
 ---
 <article>
   <header>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+    <h1>
+      <link rel="icon" type="image/png" href="favicon.png">
+      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+    </h1>
   </header>
   {{ content }}
 </article>
