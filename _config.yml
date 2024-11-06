@@ -17,7 +17,7 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {url: "/assets/cv_vhieu_20240907.pdf", title: "CV"}
+  - {url: "/assets/Victor_Nguyen_CV.pdf", title: "CV"}
   - {title: "PEACH (UNC)", file: "peach.md"}
   - {title: "iLOSCAR (TAMU REU 2024)", file: "iloscar.md"}
   - {title: "About Me", file: "aboutme.md"}
