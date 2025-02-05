@@ -15,3 +15,4 @@ I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tar
 
 [Here](https://github.com/vhi3u/peachVIS) is a link to the GitHub repository of all the figures I've created so far.
 
+<iframe src="/assets/plotR3.html" width="800" height="600"></iframe>
