@@ -15,6 +15,8 @@ I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tar
 
 [Here](https://github.com/vhi3u/peachVIS) is a link to the GitHub repository of all the figures I've created so far.
 
+[Surface Plots for Glider Displacement Relative to Water](images.md) 
+
 <iframe src="/assets/plotR3.html" width="800" height="600"></iframe>
 
 <iframe src="/assets/plotR4.html" width="800" height="600"></iframe>
