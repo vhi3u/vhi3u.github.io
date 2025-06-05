@@ -17,7 +17,7 @@ favicon: "favicon.ico"
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {url: "/assets/Victor_Nguyen_CV.pdf", title: "CV"}
+  - {url: "/assets/vn_cv.pdf", title: "CV"}
   - {title: "PEACH (UNC)", file: "peach.md"}
   - {title: "iLOSCAR (TAMU REU 2024)", file: "iloscar.md"}
   - {title: "About Me", file: "aboutme.md"}
