@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #2e3440;
+        color: #d8dee9;
+        font-family: 'JuliaMono', monospace;
+        font-size: 0.9rem;
+        padding: 2rem;
+      }
+      a { color: #88c0d0; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      nav { display: flex; gap: 2rem; margin-bottom: 3rem; }
+    </style>
+  </head>
+  <body>
+    {% include nav.html %}
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>
