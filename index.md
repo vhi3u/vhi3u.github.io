@@ -3,12 +3,12 @@ layout: default
 title: "Victor Hieu Nguyen"
 ---
 
-victor _hieu_ _nguyen_  
+victor hieu nguyen  
 unc chapel hill  
 charlotte, nc  
 
-[github](#)  
-[linkedin](#)
+[github](https://github.com/vhi3u)  
+[linkedin](https://www.linkedin.com/in/victorhieunguyen/)
   
   
   
