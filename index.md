@@ -1,4 +1,19 @@
-  <!DOCTYPE html>
+  ---
+layout: default
+title: "Victor Hieu Nguyen"
+---
+
+victor _hieu_ _nguyen_  
+unc chapel hill  
+charlotte, nc  
+
+[github](#)  
+[linkedin](#)
+  
+  
+  
+  
+  <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -52,4 +67,4 @@
     <p><a href="#">linkedin</a></p>
   </main>
 </body>
-</html>
+</html> -->
