@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Victor Hieu Nguyen"
+title: "victor hieu nguyen"
 ---
 
 victor hieu nguyen  
