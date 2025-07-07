@@ -1,19 +1,14 @@
----
-layout: default
-title: "victor hieu nguyen"
----
+<div class="content-clock-wrapper">
+  <div class="main-text">
+    victor hieu nguyen<br />
+    unc chapel hill 2026<br />
+    charlotte, nc<br /><br />
 
-victor hieu nguyen  
-unc chapel hill 2026  
-charlotte, nc  
+    <a href="https://github.com/vhi3u">github</a><br />
+    <a href="https://www.linkedin.com/in/victorhieunguyen/">linkedin</a><br />
+    <a href="mailto:vhieu@unc.edu">contact me</a><br />
 
-[github](https://github.com/vhi3u)  
-[linkedin](https://www.linkedin.com/in/victorhieunguyen/)  
-[contact me](mailto:vhieu@unc.edu)
-
-
-
-<pre>
+    <pre>
         ,
       .';
   .-'` .'
@@ -26,12 +21,13 @@ charlotte, nc
 '-'`-._           ((   o    )
         `'--....(`- ,__..--'
                 '-'`
-</pre>
+    </pre>
+  </div>
 
-
-<div id="clock" class="time-block">
-  <div><strong>Current Time</strong></div>
-  <div>EST: <span id="est-time"></span></div>
-  <div>CST: <span id="cst-time"></span></div>
-  <div>PST: <span id="pst-time"></span></div>
+  <div id="clock" class="time-block">
+    <div><strong>current time</strong></div>
+    <div>charlotte: <span id="est-time"></span></div>
+    <div>houston: <span id="cst-time"></span></div>
+    <div>los angeles: <span id="pst-time"></span></div>
+  </div>
 </div>
