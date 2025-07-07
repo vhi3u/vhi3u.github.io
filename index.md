@@ -27,3 +27,11 @@ charlotte, nc
         `'--....(`- ,__..--'
                 '-'`
 </pre>
+
+
+<div id="clock" class="time-block">
+  <div><strong>Current Time</strong></div>
+  <div>EST: <span id="est-time"></span></div>
+  <div>CST: <span id="cst-time"></span></div>
+  <div>PST: <span id="pst-time"></span></div>
+</div>
