@@ -1,11 +1,16 @@
 ---
 layout: default
 title: "Research"
+permalink: /research/
 ---
 
 # PEACH
 
-I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tarheels.live/seimlab/) in my spring semester freshman year at UNC (2023). In 2016–2017, my PI led the Processes driving Exchange at Cape Hatteras (PEACH) Program, where several scientists made use of various observational instruments to better understand seawater exchange between the continental shelf and open ocean near Cape Hatteras, North Carolina. A couple years later, I am now using some of the data collected from underwater Slocum gliders to observe seawater mixing and their origins.
+The Cape Hatteras coastal region off of North Carolina showcases a unique biogeographic boundary, driven by convergent shelfwater flow and influence from the Gulf Stream. Recent Gulf Stream deviations in position, as well as sea level rise north of Cape Hatteras show potential for large shifts in  atmospheric/oceanic forcings, and their effects on shelf and open ocean water exchange is understudied. Furthermore, the varying position of the Hatteras Front, this convergence, signals for a recharacterization of the Cape Hatteras coastal region as more of a "mixing zone" rather than a frontal system. 
+
+I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tarheels.live/seimlab/) in my spring semester freshman year at UNC (2023). In 2017-2018, my PI led the Processes driving Exchange at Cape Hatteras (PEACH) Program, where several scientists made use of various observational instruments to better understand seawater exchange between the continental shelf and open ocean near Cape Hatteras, North Carolina. 
+
+I am using data collected from PEACH to study the hydrographic variability of the shelf near Cape Hatteras. This study uses underwater Slocum glider to observe the physical and biological characteristics of the water column. 
 
 You can view my visualization scripts and preliminary figures [here](https://github.com/vhi3u/peachVIS).
 
