@@ -51,13 +51,15 @@
       {{ content }}
     </main>
     <script>
-      const button = document.getElementById("theme-toggle");
-      const themes = ["", "light-theme", "ocean-theme"];
-      let current = 0;
-      button.addEventListener("click", function() {
-        document.body.classList.remove(themes[current]);
-        current = (current + 1) % themes.length;
-        document.body.classList.add(themes[current]);
+      document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("theme-toggle");
+        const themes = ["", "light-theme", "ocean-theme"];
+        let current = 0;
+        button.addEventListener("click", function() {
+          document.body.classList.remove(themes[current]);
+          current = (current + 1) % themes.length;
+          document.body.classList.add(themes[current]);
+        });
       });
     </script>
   </body>
