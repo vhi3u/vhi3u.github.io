@@ -3,19 +3,17 @@ layout: default
 title: "Victor Hieu Nguyen"
 ---
 
-<div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+victor hieu nguyen  
+unc chapel hill  
+charlotte, nc  
 
-  <div style="flex: 1;">
-    victor hieu nguyen  
-    unc chapel hill  
-    charlotte, nc  
+[github](https://github.com/vhi3u)  
+[linkedin](https://www.linkedin.com/in/victorhieunguyen/)  
+[contact me](mailto:vhieu@unc.edu)
 
-    [github](https://github.com/vhi3u)  
-    [linkedin](https://www.linkedin.com/in/victorhieunguyen/)  
-    [contact me](mailto:vhieu@unc.edu)
-  </div>
+---
 
-  <pre style="flex: 1; text-align: left;">
+<pre>
                 ,
               .';
           .-'` .'
@@ -28,6 +26,4 @@ title: "Victor Hieu Nguyen"
         '-'`-._           ((   o    )
           jgs   `'--....(`- ,__..--'
                         '-'`
-  </pre>
-
-</div>
+</pre>
