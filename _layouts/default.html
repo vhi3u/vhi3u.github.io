@@ -63,10 +63,22 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const button = document.getElementById("theme-toggle");
+    
+        // Restore saved theme on load
+        if (localStorage.getItem("theme") === "light") {
+          document.body.classList.add("light-theme");
+        }
+    
         button.addEventListener("click", function () {
           document.body.classList.toggle("light-theme");
+    
+          // Save current theme to localStorage
+          if (document.body.classList.contains("light-theme")) {
+            localStorage.setItem("theme", "light");
+          } else {
+            localStorage.setItem("theme", "dark");
+          }
         });
       });
-    </script>
-  </body>
+    </script>  </body>
 </html>
