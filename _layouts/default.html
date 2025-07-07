@@ -6,16 +6,43 @@
     <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
     <link rel="icon" type="image/gif" href="{{ '/assets/water5.gif' | relative_url }}">
     <style>
+      :root {
+        /* doom-nord-dark default */
+        --bg: #2e3440;
+        --fg: #d8dee9;
+        --accent: #88c0d0;
+      }
+      .light-theme {
+        /* doom-nord-light */
+        --bg: #eceff4;
+        --fg: #2e3440;
+        --accent: #5e81ac;
+      }
+      .ocean-theme {
+        /* doom-nord-ocean */
+        --bg: #223249;
+        --fg: #cdd3de;
+        --accent: #8fbcbb;
+      }
       body {
-        background-color: #2e3440;
-        color: #d8dee9;
+        background-color: var(--bg);
+        color: var(--fg);
         font-family: 'JuliaMono', monospace;
         font-size: 1.5rem;
         padding: 2rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-      a { color: #88c0d0; text-decoration: none; }
+      a { color: var(--accent); text-decoration: none; }
       a:hover { text-decoration: underline; }
       nav { display: flex; gap: 2rem; margin-bottom: 3rem; }
+      button#theme-toggle {
+        background: none;
+        border: none;
+        color: var(--accent);
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0;
+      }
     </style>
   </head>
   <body>
@@ -23,5 +50,16 @@
     <main>
       {{ content }}
     </main>
+    <button id="theme-toggle">toggle theme</button>
+    <script>
+      const button = document.getElementById("theme-toggle");
+      const themes = ["", "light-theme", "ocean-theme"];
+      let current = 0;
+      button.addEventListener("click", function() {
+        document.body.classList.remove(themes[current]);
+        current = (current + 1) % themes.length;
+        document.body.classList.add(themes[current]);
+      });
+    </script>
   </body>
 </html>
