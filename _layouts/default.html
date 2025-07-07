@@ -5,16 +5,22 @@
     <title>{{ page.title }}</title>
     <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
     <link rel="icon" type="image/gif" href="{{ '/assets/water5.gif' | relative_url }}">
+
+    <!-- ✨ Apply theme class early -->
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.add("light-theme");
+      }
+    </script>
+
     <style>
       :root {
-        /* doom-nord-dark (default) */
         --bg: #2e3440;
         --fg: #d8dee9;
         --accent: #88c0d0;
       }
 
-      body.light-theme {
-        /* doom-nord-light */
+      html.light-theme {
         --bg: #eceff4;
         --fg: #2e3440;
         --accent: #5e81ac;
@@ -60,25 +66,16 @@
       {{ content }}
     </main>
 
+    <!-- ✨ Theme toggle logic -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const button = document.getElementById("theme-toggle");
-    
-        // Restore saved theme on load
-        if (localStorage.getItem("theme") === "light") {
-          document.body.classList.add("light-theme");
-        }
-    
-        button.addEventListener("click", function () {
-          document.body.classList.toggle("light-theme");
-    
-          // Save current theme to localStorage
-          if (document.body.classList.contains("light-theme")) {
-            localStorage.setItem("theme", "light");
-          } else {
-            localStorage.setItem("theme", "dark");
-          }
+
+        button?.addEventListener("click", function () {
+          const isLight = document.documentElement.classList.toggle("light-theme");
+          localStorage.setItem("theme", isLight ? "light" : "dark");
         });
       });
-    </script>  </body>
+    </script>
+  </body>
 </html>
