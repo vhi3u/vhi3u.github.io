@@ -63,7 +63,7 @@
         line-height: 1.6;
         width: fit-content;
       }
-      
+
     </style>
   </head>
   <body>
@@ -80,5 +80,31 @@
         });
       });
     </script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const options = {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        };
+
+        const est = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/New_York' });
+        const cst = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Chicago' });
+        const pst = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Los_Angeles' });
+
+        document.getElementById('est-time').textContent = est;
+        document.getElementById('cst-time').textContent = cst;
+        document.getElementById('pst-time').textContent = pst;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+
+    
   </body>
 </html>
+
