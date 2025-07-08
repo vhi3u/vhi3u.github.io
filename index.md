@@ -24,14 +24,17 @@
     </pre>
   </div>
 
-  <div id="clock" class="time-block">
-    <div><strong>current time</strong></div>
-    <div>charlotte: <span id="est-time"></span></div>
-    <div>houston: <span id="cst-time"></span></div>
-    <div>los angeles: <span id="pst-time"></span></div>
-  </div>
+  <!-- NEW wrapper for right-hand block -->
+  <div class="clock-music-wrapper">
+    <div id="clock" class="time-block">
+      <div><strong>current time</strong></div>
+      <div>charlotte: <span id="est-time"></span></div>
+      <div>houston: <span id="cst-time"></span></div>
+      <div>los angeles: <span id="pst-time"></span></div>
+    </div>
 
-  <div class="music-block">
-    currently listening to: <span id="trackname"></span> by <span id="Artist"></span> for the <span id="ordinal"></span> time
+    <div class="music-block">
+      currently listening to: <span id="trackname"></span> by <span id="Artist"></span> for the <span id="ordinal"></span> time
+    </div>
   </div>
 </div>
