@@ -76,6 +76,7 @@
 
       .music-block {
         font-family: 'JuliaMono', monospace;
+        font-size: 1.5rem;
         margin-top: 2rem;
         color: var(--fg);
         font-size: 1rem;
@@ -85,6 +86,29 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+      }
+
+      footer.modeline {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #2e3440;
+        color: #d8dee9;
+        font-family: 'JuliaMono', monospace;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-top: 1px solid #4c566a;
+        z-index: 999;
+      }
+
+      footer.modeline .modeline-segment {
+        margin: 0 1rem;
+        white-space: nowrap;
+
       }
 
     </style>
