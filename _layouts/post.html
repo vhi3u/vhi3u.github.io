@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  </head>
+  <body>
+    {% include nav.html %}
+
+    <main>
+      {% assign lines = content | split: '\n' %}
+      {% assign title_line = lines[1] | strip %}
+      {% assign title = title_line | remove: '#' | strip %}
+      <h1>{{ title }}</h1>
+
+      <article>
+        {{ content | markdownify }}
+      </article>
+    </main>
+
+    {% include modeline.html %}
+  </body>
+</html>
