@@ -96,7 +96,7 @@
         background: #2e3440;
         color: #d8dee9;
         font-family: 'JuliaMono', monospace;
-        font-size: 1.5rem;
+        font-size: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -147,7 +147,8 @@
         document.getElementById('pst-time').textContent = pst;
       }
 
-      updateClock();
+      document.addEventListener("DOMContentLoaded", updateClock);
+      
       setInterval(updateClock, 1000);
     </script>
 
