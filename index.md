@@ -31,7 +31,7 @@
       <div>charlotte: <span id="est-time"></span></div>
       <div>houston: <span id="cst-time"></span></div>
       <div>los angeles: <span id="pst-time"></span></div>
-    </div> -->
+    </div>
 
-  </div>
+  </div> -->
 </div>

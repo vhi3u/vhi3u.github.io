@@ -90,7 +90,7 @@
 
       footer.modeline {
         position: fixed;
-        bottom: 0;
+        bottom: 1.5rem;
         left: 0;
         width: 100%;
         background: #2e3440;
@@ -150,8 +150,8 @@
         const name = track.querySelector("name").textContent;
         const artist = track.querySelector("artist").textContent;
     
-        document.getElementById("trackname").textContent = name;
-        document.getElementById("Artist").textContent = artist;
+        document.getElementById("trackname").textContent = name.toLowerCase();
+        document.getElementById("Artist").textContent = artist.toLowerCase();
     
         const infoUrl = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
         const infoXml = await fetch(infoUrl).then(r => r.text());
@@ -182,10 +182,10 @@
     
     <footer class="modeline">
       <div class="modeline-segment">
-        <span>🎧 <span id="trackname">—</span> by <span id="Artist">—</span></span>
+        <span>playing: <span id="trackname">—</span> by <span id="Artist">—</span></span>
       </div>
       <div class="modeline-segment">
-        played for the <span id="ordinal">—</span> time
+        playcount: <span id="ordinal">—</span> time
       </div>
       <div class="modeline-segment">
         ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span id="pst-time">--:--</span>
