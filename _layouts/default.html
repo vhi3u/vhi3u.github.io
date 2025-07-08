@@ -100,9 +100,10 @@
         font-family: 'JuliaMono', monospace;
         font-size: 1rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1rem;
         border-top: 1px solid var(--fg);
         box-shadow: 0 -2px 4px rgba(0,0,0,0.6);
         z-index: 999;
@@ -111,6 +112,9 @@
       footer.modeline .modeline-segment {
         margin: 0 1rem;
         white-space: nowrap;
+        flex: 1 1 auto;
+        text-align: center;
+        min-width: 0;
 
       }
 
