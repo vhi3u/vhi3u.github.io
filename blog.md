@@ -6,8 +6,6 @@ permalink: /blog/
 
 # blog
 
-# blog
-
 <ul>
   {% for post in site.posts %}
     <li>
