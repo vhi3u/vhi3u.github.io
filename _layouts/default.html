@@ -133,7 +133,7 @@
         return n + (s[(v - 20) % 10] || s[v] || s[0]);
       }
       async function getLatestTrack() {
-        const user = "vuniiiiii";
+        const user = "vuniiiii";
         const api = "181866e02aef0bec61cc0697fcb871d4";
         const recentUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${api}&limit=1`;
         const xml = await fetch (recentUrl).then(r => r.text());
