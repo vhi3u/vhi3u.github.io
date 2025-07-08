@@ -1,3 +1,8 @@
+---
+layout: default
+title: victor hieu nguyen
+---
+
 <div class="content-clock-wrapper">
   <div class="main-text">
     victor hieu nguyen<br />
