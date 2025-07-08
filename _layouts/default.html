@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title | downcase }}{% else %}{{ site.title | downcase }}{% endif %}</title>
     <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
     <link rel="icon" type="image/gif" href="{{ '/assets/water5.gif' | relative_url }}">
     <style>
