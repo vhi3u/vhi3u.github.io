@@ -162,6 +162,15 @@
       }
     
       document.addEventListener("DOMContentLoaded", function () {
+        // 🌗 Theme toggle logic
+        const button = document.getElementById("theme-toggle");
+        if (button) {
+          button.addEventListener("click", function () {
+            document.body.classList.toggle("light-theme");
+          });
+        }
+    
+        // ⏰ Clock + 🎵 Music
         updateClock();
         setInterval(updateClock, 1000);
     
