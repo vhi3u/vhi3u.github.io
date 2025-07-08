@@ -75,6 +75,13 @@
         width: fit-content;
       }
 
+      .music-block {
+        font-family: 'JuliaMono', monospace;
+        margin-top: 2rem;
+        color: var(--fg);
+        font-size: 1rem;
+      }
+
     </style>
   </head>
   <body>
@@ -115,6 +122,40 @@
       setInterval(updateClock, 1000);
     </script>
 
+    <script>
+      function getOrdinal(n) {
+        const s = ["th", "st", "nd", "rd"], v = n % 100;
+        return n + (s[(v - 20) % 10] || s[v] || s[0]);
+      }
+      async function getLatestTrack() {
+        const user = "vuniiiiii";
+        const api = "181866e02aef0bec61cc0697fcb871d4";
+        const recentUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${api}&limit=1`;
+        const xml = await fetch (recentUrl).then(r => r.text());
+        const dom = new DOMParser().parseFromString(xml, "application/xml");
+
+        const track = dom.querySelector("track");
+        const name = track.querySelector("name").textContent;
+        const artist = track.querySelector("artist")
+
+        document.getElementById("trackname").textContent = name;
+        document.getElementById("Artist").textContent = artist;
+
+        const infoUrl = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
+        const infoXml = await fetch(infoUrl).then(r => r.text());
+        const infoDom = new DOMParser().parseFromString(infoXml, "application/xml");
+
+        const playcount = infoDom.querySelector("userplaycount")?.textContent || "0";
+        document.getElementById("ordinal").textContent = getOrdinal(parseInt(playcount) + 1);
+
+      }
+
+      window.onload = () => {
+        getLatestTrack();
+        setInterval(getLatestTrack, 20000);
+      };
+
+    </script>
     
   </body>
 </html>
