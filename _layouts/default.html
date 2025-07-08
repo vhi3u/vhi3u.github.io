@@ -11,6 +11,7 @@
         --bg: #2e3440;
         --fg: #d8dee9;
         --accent: #88c0d0;
+        --modeline: #88c0d0;
       }
 
       body.light-theme {
@@ -18,6 +19,7 @@
         --bg: #eceff4;
         --fg: #2e3440;
         --accent: #5e81ac;
+        --modeline: #5e81ac;
       }
 
       body {
@@ -93,15 +95,15 @@
         bottom: 1.5rem;
         left: 0;
         width: 100%;
-        background: #2e3440;
-        color: #d8dee9;
+        background: var(--accent);
+        color: var(--bg);
         font-family: 'JuliaMono', monospace;
         font-size: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.5rem 1rem;
-        border-top: 1px solid #4c566a;
+        border-top: 1px solid var(--fg);
         box-shadow: 0 -2px 4px rgba(0,0,0,0.6);
         z-index: 999;
       }
@@ -113,9 +115,9 @@
       }
 
       body.light-theme footer.modeline {
-        background: #2e3440;
-        color: #eceff4;
-        border-top: 1px solid #d8dee9;
+        background: var(--accent);
+        color: var(--bg);
+        border-top: 1px solid var(--fg);
         box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
       }
 
