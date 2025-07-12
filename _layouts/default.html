@@ -1,214 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{% if page.title %}{{ page.title | downcase }}{% else %}{{ site.title | downcase }}{% endif %}</title>
-    <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
-    <link rel="icon" type="image/gif" href="{{ '/assets/water5.gif' | relative_url }}">
-    <style>
-      :root {
-        /* doom-nord-dark (default) */
-        --bg: #2e3440;
-        --fg: #d8dee9;
-        --accent: #88c0d0;
-        --modeline: #88c0d0;
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ▸ title & favicon first so the tab doesn’t flash -->
+  <title>{% if page.title %}{{ page.title | downcase }}{% else %}{{ site.title | downcase }}{% endif %}</title>
+  <link rel="icon" href="{{ '/assets/water5.gif' | relative_url }}" type="image/gif">
+  <link rel="preload" href="{{ '/assets/water5.gif' | relative_url }}" as="image">
+
+  <!-- ▸ pre-paint theme: dark is default; we store only “light” -->
+  <script>
+    (function () {
+      if (localStorage.getItem('preferred-theme') === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+
+  <!-- font -->
+  <link href="https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.css" rel="stylesheet">
+
+  <!-- styles -->
+  <style>
+    :root {
+      /* doom-nord-dark (default) */
+      --bg: #2e3440;
+      --fg: #d8dee9;
+      --accent: #88c0d0;
+      --modeline: #88c0d0;
+    }
+
+    .light-theme {
+      /* doom-nord-light */
+      --bg: #eceff4;
+      --fg: #2e3440;
+      --accent: #5e81ac;
+      --modeline: #5e81ac;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'JuliaMono', monospace;
+      font-size: 1.5rem;
+      padding: 2rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { display: flex; gap: 2rem; margin-bottom: 3rem; }
+
+    #theme-toggle {
+      background: none; border: none; cursor: pointer;
+      color: var(--accent); font-family: 'JuliaMono', monospace; font-size: 1.5rem;
+    }
+
+    .content-clock-wrapper { display: flex; align-items: flex-start; gap: 4rem; flex-wrap: wrap; }
+    .main-text { max-width: 600px; }
+
+    .time-block {
+      font-family: 'JuliaMono', monospace;
+      background-color: rgba(255,255,255,0.05);
+      font-size: 1.5rem; padding: 2rem; border-left: 4px solid var(--accent);
+      line-height: 1.6; width: fit-content;
+    }
+
+    .music-block { font-family: 'JuliaMono', monospace; margin-top: 2rem; font-size: 1rem; }
+
+    .clock-music-wrapper { display: flex; flex-direction: column; gap: 2rem; }
+
+    footer.modeline {
+      position: fixed; bottom: 1.5rem; left: 0; width: 100%;
+      background: var(--accent); color: var(--bg);
+      font-family: 'JuliaMono', monospace; font-size: 1rem;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      padding: .5rem 1rem; border-top: 1px solid var(--fg); box-shadow: 0 -2px 4px rgba(0,0,0,.6); z-index: 999;
+    }
+    footer.modeline .modeline-segment { margin: 0 1rem; white-space: nowrap; flex: 1 1 auto; text-align: center; min-width: 0; }
+
+    .light-theme footer.modeline {
+      background: var(--accent); color: var(--bg);
+      border-top: 1px solid var(--fg); box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+    }
+  </style>
+</head>
+
+<body>
+  {% include nav.html %}
+  <main>{{ content }}</main>
+
+  <script>
+    /* ⏰ world-clock */
+    function updateClock() {
+      const now = new Date();
+      const opts = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      document.getElementById('est-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/New_York'});
+      document.getElementById('cst-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/Chicago'});
+      document.getElementById('pst-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/Los_Angeles'});
+    }
+
+    /* ordinal helper */
+    function getOrdinal(n) {
+      const s = ["th","st","nd","rd"], v = n % 100;
+      return n + (s[(v-20)%10] || s[v] || s[0]);
+    }
+
+    /* 🎵 last.fm scrobbles */
+    async function getLatestTrack() {
+      const user = "vuniiiii";
+      const api  = "181866e02aef0bec61cc0697fcb871d4";
+      const recent = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${api}&limit=1`;
+      const recentXML = await fetch(recent).then(r => r.text());
+      const trackDOM = new DOMParser().parseFromString(recentXML, "application/xml").querySelector("track");
+      if (!trackDOM) return;
+
+      const name   = trackDOM.querySelector("name").textContent;
+      const artist = trackDOM.querySelector("artist").textContent;
+      document.getElementById("trackname").textContent = name.toLowerCase();
+      document.getElementById("Artist").textContent    = artist.toLowerCase();
+
+      const info = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
+      const infoXML  = await fetch(info).then(r => r.text());
+      const playcount = new DOMParser().parseFromString(infoXML, "application/xml").querySelector("userplaycount")?.textContent || "0";
+      document.getElementById("ordinal").textContent = getOrdinal(+playcount + 1);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      /* 🌗 theme toggle */
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const isLight = document.documentElement.classList.toggle('light-theme');
+          if (isLight) localStorage.setItem('preferred-theme', 'light');
+          else         localStorage.removeItem('preferred-theme');
+        });
       }
 
-      body.light-theme {
-        /* doom-nord-light */
-        --bg: #eceff4;
-        --fg: #2e3440;
-        --accent: #5e81ac;
-        --modeline: #5e81ac;
-      }
+      /* clocks + music */
+      updateClock(); setInterval(updateClock, 1_000);
+      getLatestTrack(); setInterval(getLatestTrack, 20_000);
+    });
+  </script>
 
-      body {
-        background-color: var(--bg);
-        color: var(--fg);
-        font-family: 'JuliaMono', monospace;
-        font-size: 1.5rem;
-        padding: 2rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      nav {
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      button#theme-toggle {
-        background: none;
-        border: none;
-        color: var(--accent);
-        cursor: pointer;
-        font-family: 'JuliaMono', monospace;
-        font-size: 1.5rem;
-      }
-
-      .content-clock-wrapper {
-        display: flex;
-        align-items: flex-start;
-        gap: 4rem;
-        flex-wrap: wrap; /* allows stacking on smaller screens */
-      }
-
-      .main-text {
-        max-width: 600px;
-      }
-
-      .time-block {
-        font-family: 'JuliaMono', monospace;
-        background-color: rgba(255, 255, 255, 0.05); /* subtle transparent block */
-        font-size: 1.5rem;
-        padding: 2rem;
-        border-left: 4px solid var(--accent);
-        line-height: 1.6;
-        width: fit-content;
-      }
-
-      .music-block {
-        font-family: 'JuliaMono', monospace;
-        font-size: 1.5rem;
-        margin-top: 2rem;
-        color: var(--fg);
-        font-size: 1rem;
-      }
-
-      .clock-music-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      footer.modeline {
-        position: fixed;
-        bottom: 1.5rem;
-        left: 0;
-        width: 100%;
-        background: var(--accent);
-        color: var(--bg);
-        font-family: 'JuliaMono', monospace;
-        font-size: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        border-top: 1px solid var(--fg);
-        box-shadow: 0 -2px 4px rgba(0,0,0,0.6);
-        z-index: 999;
-      }
-
-      footer.modeline .modeline-segment {
-        margin: 0 1rem;
-        white-space: nowrap;
-        flex: 1 1 auto;
-        text-align: center;
-        min-width: 0;
-
-      }
-
-      body.light-theme footer.modeline {
-        background: var(--accent);
-        color: var(--bg);
-        border-top: 1px solid var(--fg);
-        box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-      }
-
-    </style>
-
-    
-  </head>
-  <body>
-    {% include nav.html %}
-    <main>
-      {{ content }}
-    </main>
-
-    <script>
-      function updateClock() {
-        const now = new Date();
-        const options = {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: false
-        };
-    
-        document.getElementById('est-time').textContent = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/New_York' });
-        document.getElementById('cst-time').textContent = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Chicago' });
-        document.getElementById('pst-time').textContent = now.toLocaleTimeString('en-US', { ...options, timeZone: 'America/Los_Angeles' });
-      }
-    
-      function getOrdinal(n) {
-        const s = ["th", "st", "nd", "rd"], v = n % 100;
-        return n + (s[(v - 20) % 10] || s[v] || s[0]);
-      }
-    
-      async function getLatestTrack() {
-        const user = "vuniiiii";
-        const api = "181866e02aef0bec61cc0697fcb871d4";
-        const recentUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${api}&limit=1`;
-        const xml = await fetch(recentUrl).then(r => r.text());
-        const dom = new DOMParser().parseFromString(xml, "application/xml");
-    
-        const track = dom.querySelector("track");
-        const name = track.querySelector("name").textContent;
-        const artist = track.querySelector("artist").textContent;
-    
-        document.getElementById("trackname").textContent = name.toLowerCase();
-        document.getElementById("Artist").textContent = artist.toLowerCase();
-    
-        const infoUrl = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
-        const infoXml = await fetch(infoUrl).then(r => r.text());
-        const infoDom = new DOMParser().parseFromString(infoXml, "application/xml");
-    
-        const playcount = infoDom.querySelector("userplaycount")?.textContent || "0";
-        document.getElementById("ordinal").textContent = getOrdinal(parseInt(playcount) + 1);
-      }
-    
-      document.addEventListener("DOMContentLoaded", function () {
-        // 🌗 Theme toggle logic
-        const button = document.getElementById("theme-toggle");
-        if (button) {
-          button.addEventListener("click", function () {
-            document.body.classList.toggle("light-theme");
-          });
-        }
-    
-        // ⏰ Clock + 🎵 Music
-        updateClock();
-        setInterval(updateClock, 1000);
-    
-        getLatestTrack();
-        setInterval(getLatestTrack, 20000);
-      });
-    </script>
-    
-    
-    <footer class="modeline">
-      <div class="modeline-segment">
-        <span>listening to: <span id="trackname">—</span> by <span id="Artist">—</span></span>
-      </div>
-      <div class="modeline-segment">
-        playcount: <span id="ordinal">—</span> time
-      </div>
-      <div class="modeline-segment">
-        ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span id="pst-time">--:--</span>
-      </div>
-    </footer>
-    
-
-  </body>
+  <footer class="modeline">
+    <div class="modeline-segment">
+      listening to: <span id="trackname">—</span> by <span id="Artist">—</span>
+    </div>
+    <div class="modeline-segment">
+      playcount: <span id="ordinal">—</span> time
+    </div>
+    <div class="modeline-segment">
+      ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span id="pst-time">--:--</span>
+    </div>
+  </footer>
+</body>
 </html>
-
