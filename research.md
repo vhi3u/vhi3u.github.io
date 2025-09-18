@@ -26,3 +26,12 @@ Our medium for studying this is the **i**nteractive **L**ong-term **O**cean-atmo
 
 More work on iLOSCAR can be found [here](https://github.com/Shihan150/iloscar).
 
+---
+
+# SHOAL DYNAMICS
+
+Wrapping up my work with Dr. Harvey Seim, I have since begun my honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we are looking at how coastal bathymetry can impact fronts, offshore fluxes, and mixing. 
+
+I've always wanted to get more involved in ocean modeling, and with this project we will leverage [Oceananigans.jl](https://clima.github.io/OceananigansDocumentation/stable/) and GPU's for this project. Boundary conditions and coastal bathymetry test cases for the Diamond Shoals (NC) are from [Han et al. (2022)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JC019274) and [GEBCO](https://www.gebco.net/), respectively. 
+
+Excited to share more of this work in the future!
