@@ -7,7 +7,7 @@ title: victor hieu nguyen
   <div class="main-text">
     victor hieu nguyen<br />
     unc chapel hill 2026<br />
-    charlotte, nc<br /><br />
+    chapel hill, nc<br /><br />
 
     <a href="https://github.com/vhi3u">github</a><br />
     <a href="https://www.linkedin.com/in/victorhieunguyen/">linkedin</a><br />
