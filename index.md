@@ -6,8 +6,9 @@ title: victor hieu nguyen
 <div class="content-clock-wrapper">
   <div class="main-text">
     victor hieu nguyen<br />
-    unc chapel hill 2026<br />
-    chapel hill, nc<br /><br />
+    envsci & math @ unc chapel hill <br />
+    class of 2026<br />
+    <br />
 
     <a href="https://github.com/vhi3u">github</a><br />
     <a href="https://www.linkedin.com/in/victorhieunguyen/">linkedin</a><br />
