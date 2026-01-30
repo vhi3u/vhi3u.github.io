@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -38,6 +39,19 @@
       --modeline: #5e81ac;
     }
 
+    .valentine-theme {
+      /* pink valentine theme 💕 */
+      --bg: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
+      --fg: #8b1a4a;
+      --accent: #ff1493;
+      --modeline: #ff69b4;
+    }
+
+    .valentine-theme body {
+      background: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
+      background-attachment: fixed;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--fg);
@@ -47,42 +61,320 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    nav { display: flex; gap: 2rem; margin-bottom: 3rem; }
-
-    #theme-toggle {
-      background: none; border: none; cursor: pointer;
-      color: var(--accent); font-family: 'JuliaMono', monospace; font-size: 1.5rem;
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    .content-clock-wrapper { display: flex; align-items: flex-start; gap: 4rem; flex-wrap: wrap; }
-    .main-text { max-width: 600px; }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    #theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--accent);
+      font-family: 'JuliaMono', monospace;
+      font-size: 1.5rem;
+    }
+
+    .content-clock-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .main-text {
+      max-width: 600px;
+    }
 
     .time-block {
       font-family: 'JuliaMono', monospace;
-      background-color: rgba(255,255,255,0.05);
-      font-size: 1.5rem; padding: 2rem; border-left: 4px solid var(--accent);
-      line-height: 1.6; width: fit-content;
+      background-color: rgba(255, 255, 255, 0.05);
+      font-size: 1.5rem;
+      padding: 2rem;
+      border-left: 4px solid var(--accent);
+      line-height: 1.6;
+      width: fit-content;
     }
 
-    .music-block { font-family: 'JuliaMono', monospace; margin-top: 2rem; font-size: 1rem; }
+    .music-block {
+      font-family: 'JuliaMono', monospace;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
 
-    .clock-music-wrapper { display: flex; flex-direction: column; gap: 2rem; }
+    .clock-music-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     footer.modeline {
-      position: fixed; bottom: 1.5rem; left: 0; width: 100%;
-      background: var(--accent); color: var(--bg);
-      font-family: 'JuliaMono', monospace; font-size: 1rem;
-      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-      padding: .5rem 1rem; border-top: 1px solid var(--fg); box-shadow: 0 -2px 4px rgba(0,0,0,.6); z-index: 999;
+      position: fixed;
+      bottom: 1.5rem;
+      left: 0;
+      width: 100%;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'JuliaMono', monospace;
+      font-size: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem 1rem;
+      border-top: 1px solid var(--fg);
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, .6);
+      z-index: 999;
     }
-    footer.modeline .modeline-segment { margin: 0 1rem; white-space: nowrap; flex: 1 1 auto; text-align: center; min-width: 0; }
+
+    footer.modeline .modeline-segment {
+      margin: 0 1rem;
+      white-space: nowrap;
+      flex: 1 1 auto;
+      text-align: center;
+      min-width: 0;
+    }
 
     .light-theme footer.modeline {
-      background: var(--accent); color: var(--bg);
-      border-top: 1px solid var(--fg); box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+      background: var(--accent);
+      color: var(--bg);
+      border-top: 1px solid var(--fg);
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, .1);
+    }
+
+    /* Password Modal */
+    .password-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .password-modal.active {
+      display: flex;
+    }
+
+    .password-box {
+      background: linear-gradient(135deg, #2e3440 0%, #3b4252 100%);
+      padding: 3rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 2px solid #ff69b4;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 50px rgba(255, 105, 180, 0.8);
+      }
+    }
+
+    .password-box h2 {
+      color: #ff69b4;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .password-box input {
+      font-family: 'JuliaMono', monospace;
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      background: #2e3440;
+      color: #d8dee9;
+      outline: none;
+      text-align: center;
+    }
+
+    .password-box input:focus {
+      border-color: #ff1493;
+      box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+    }
+
+    .password-box button {
+      font-family: 'JuliaMono', monospace;
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .password-box button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+
+    .password-error {
+      color: #ff6b6b;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    /* Valentine Invitation Overlay */
+    .valentine-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .valentine-overlay.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .valentine-card {
+      background: white;
+      padding: 3rem 4rem;
+      border-radius: 30px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(139, 26, 74, 0.3);
+      max-width: 600px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .valentine-card h1 {
+      font-size: 2.5rem;
+      color: #ff1493;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+    }
+
+    .valentine-card p {
+      font-size: 1.3rem;
+      color: #8b1a4a;
+      line-height: 1.8;
+      margin: 1rem 0;
+    }
+
+    .valentine-card .hearts {
+      font-size: 3rem;
+      animation: heartbeat 1s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .valentine-card .close-valentine {
+      font-family: 'JuliaMono', monospace;
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      margin-top: 2rem;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .valentine-card .close-valentine:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+    }
+
+    .floating-hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 9998;
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 2rem;
+      animation: rise 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes rise {
+      0% {
+        bottom: -10%;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.8;
+      }
+
+      100% {
+        bottom: 110%;
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -91,38 +383,68 @@
   {% include nav.html %}
   <main>{{ content }}</main>
 
+  <!-- Password Modal -->
+  <div class="password-modal" id="password-modal">
+    <div class="password-box">
+      <h2>🔒 enter the secret password</h2>
+      <input type="password" id="annie-password" placeholder="•••••" maxlength="10">
+      <button id="submit-password">unlock 💕</button>
+      <p class="password-error" id="password-error">wrong password! try again~</p>
+    </div>
+  </div>
+
+  <!-- Valentine Overlay -->
+  <div class="valentine-overlay" id="valentine-overlay">
+    <div class="floating-hearts" id="floating-hearts"></div>
+    <div class="valentine-card">
+      <div class="hearts">💕💝💕</div>
+      <h1>~ for annie ~</h1>
+      <p>
+        roses are red, violets are blue,<br>
+        i have a question just for you...
+      </p>
+      <p style="font-size: 1.8rem; font-weight: bold; color: #ff1493;">
+        will you be my valentine? 💗
+      </p>
+      <p style="font-size: 1rem; color: #d87093;">
+        — with love, from victor
+      </p>
+      <button class="close-valentine" id="close-valentine">yes! 💖</button>
+    </div>
+  </div>
+
   <script>
     /* ⏰ world-clock */
     function updateClock() {
       const now = new Date();
       const opts = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-      document.getElementById('est-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/New_York'});
-      document.getElementById('cst-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/Chicago'});
-      document.getElementById('pst-time').textContent = now.toLocaleTimeString('en-US', {...opts, timeZone: 'America/Los_Angeles'});
+      document.getElementById('est-time').textContent = now.toLocaleTimeString('en-US', { ...opts, timeZone: 'America/New_York' });
+      document.getElementById('cst-time').textContent = now.toLocaleTimeString('en-US', { ...opts, timeZone: 'America/Chicago' });
+      document.getElementById('pst-time').textContent = now.toLocaleTimeString('en-US', { ...opts, timeZone: 'America/Los_Angeles' });
     }
 
     /* ordinal helper */
     function getOrdinal(n) {
-      const s = ["th","st","nd","rd"], v = n % 100;
-      return n + (s[(v-20)%10] || s[v] || s[0]);
+      const s = ["th", "st", "nd", "rd"], v = n % 100;
+      return n + (s[(v - 20) % 10] || s[v] || s[0]);
     }
 
     /* 🎵 last.fm scrobbles */
     async function getLatestTrack() {
       const user = "vuniiiii";
-      const api  = "181866e02aef0bec61cc0697fcb871d4";
+      const api = "181866e02aef0bec61cc0697fcb871d4";
       const recent = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${api}&limit=1`;
       const recentXML = await fetch(recent).then(r => r.text());
       const trackDOM = new DOMParser().parseFromString(recentXML, "application/xml").querySelector("track");
       if (!trackDOM) return;
 
-      const name   = trackDOM.querySelector("name").textContent;
+      const name = trackDOM.querySelector("name").textContent;
       const artist = trackDOM.querySelector("artist").textContent;
       document.getElementById("trackname").textContent = name.toLowerCase();
-      document.getElementById("Artist").textContent    = artist.toLowerCase();
+      document.getElementById("Artist").textContent = artist.toLowerCase();
 
       const info = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
-      const infoXML  = await fetch(info).then(r => r.text());
+      const infoXML = await fetch(info).then(r => r.text());
       const playcount = new DOMParser().parseFromString(infoXML, "application/xml").querySelector("userplaycount")?.textContent || "0";
       document.getElementById("ordinal").textContent = getOrdinal(+playcount + 1);
     }
@@ -134,13 +456,97 @@
         btn.addEventListener('click', () => {
           const isLight = document.documentElement.classList.toggle('light-theme');
           if (isLight) localStorage.setItem('preferred-theme', 'light');
-          else         localStorage.removeItem('preferred-theme');
+          else localStorage.removeItem('preferred-theme');
         });
       }
 
       /* clocks + music */
       updateClock(); setInterval(updateClock, 1_000);
       getLatestTrack(); setInterval(getLatestTrack, 20_000);
+
+      /* 💕 Annie's Secret Valentine */
+      const annieBtn = document.getElementById('annie-secret');
+      const passwordModal = document.getElementById('password-modal');
+      const passwordInput = document.getElementById('annie-password');
+      const submitPassword = document.getElementById('submit-password');
+      const passwordError = document.getElementById('password-error');
+      const valentineOverlay = document.getElementById('valentine-overlay');
+      const closeValentine = document.getElementById('close-valentine');
+      const floatingHearts = document.getElementById('floating-hearts');
+
+      const SECRET_PASSWORD = '12345';
+
+      if (annieBtn) {
+        annieBtn.addEventListener('click', () => {
+          passwordModal.classList.add('active');
+          passwordInput.value = '';
+          passwordError.style.display = 'none';
+          passwordInput.focus();
+        });
+      }
+
+      // Close modal on background click
+      passwordModal.addEventListener('click', (e) => {
+        if (e.target === passwordModal) {
+          passwordModal.classList.remove('active');
+        }
+      });
+
+      // Submit password
+      submitPassword.addEventListener('click', checkPassword);
+      passwordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') checkPassword();
+      });
+
+      function checkPassword() {
+        if (passwordInput.value === SECRET_PASSWORD) {
+          passwordModal.classList.remove('active');
+          activateValentineMode();
+        } else {
+          passwordError.style.display = 'block';
+          passwordInput.value = '';
+          passwordInput.classList.add('shake');
+          setTimeout(() => passwordInput.classList.remove('shake'), 500);
+        }
+      }
+
+      function activateValentineMode() {
+        // Apply valentine theme
+        document.documentElement.classList.remove('light-theme');
+        document.documentElement.classList.add('valentine-theme');
+        localStorage.setItem('preferred-theme', 'valentine');
+
+        // Show overlay with invitation
+        valentineOverlay.classList.add('active');
+
+        // Create floating hearts
+        createFloatingHearts();
+      }
+
+      function createFloatingHearts() {
+        const hearts = ['💕', '💗', '💖', '💝', '❤️', '💓', '💞'];
+        for (let i = 0; i < 20; i++) {
+          setTimeout(() => {
+            const heart = document.createElement('span');
+            heart.className = 'floating-heart';
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heart.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+            floatingHearts.appendChild(heart);
+          }, i * 300);
+        }
+      }
+
+      // Close valentine overlay but keep theme
+      closeValentine.addEventListener('click', () => {
+        valentineOverlay.classList.remove('active');
+      });
+
+      // Restore valentine theme on page load if previously set
+      if (localStorage.getItem('preferred-theme') === 'valentine') {
+        document.documentElement.classList.add('valentine-theme');
+      }
     });
   </script>
 
@@ -152,8 +558,10 @@
       playcount: <span id="ordinal">—</span> time
     </div>
     <div class="modeline-segment">
-      ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span id="pst-time">--:--</span>
+      ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span
+        id="pst-time">--:--</span>
     </div>
   </footer>
 </body>
+
 </html>
