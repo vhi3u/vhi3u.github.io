@@ -41,15 +41,14 @@
 
     .valentine-theme {
       /* pink valentine theme 💕 */
-      --bg: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
+      --bg: #ffe6f0;
       --fg: #8b1a4a;
       --accent: #ff1493;
       --modeline: #ff69b4;
     }
 
     .valentine-theme body {
-      background: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
-      background-attachment: fixed;
+      background: #ffe6f0;
     }
 
     body {
@@ -171,25 +170,11 @@
     }
 
     .password-box {
-      background: linear-gradient(135deg, #2e3440 0%, #3b4252 100%);
+      background: #2e3440;
       padding: 3rem;
       border-radius: 20px;
       text-align: center;
       border: 2px solid #ff69b4;
-      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-      animation: pulse-glow 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse-glow {
-
-      0%,
-      100% {
-        box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-      }
-
-      50% {
-        box-shadow: 0 0 50px rgba(255, 105, 180, 0.8);
-      }
     }
 
     .password-box h2 {
@@ -248,7 +233,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #ffe6f0 0%, #ffb6c1 50%, #ff69b4 100%);
+      background: #ffe6f0;
       z-index: 9999;
       justify-content: center;
       align-items: center;
@@ -304,6 +289,16 @@
       color: #8b1a4a;
       line-height: 1.8;
       margin: 1rem 0;
+    }
+
+    .valentine-card .gif-container {
+      margin: 1.5rem 0;
+    }
+
+    .valentine-card .gif-container img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(139, 26, 74, 0.2);
     }
 
     .valentine-card .hearts {
@@ -399,6 +394,9 @@
     <div class="valentine-card">
       <div class="hearts">💕💝💕</div>
       <h1>~ for annie ~</h1>
+      <div class="gif-container">
+        <!-- Add your gif here: <img src="/path/to/your.gif" alt="valentine gif"> -->
+      </div>
       <p>
         roses are red, violets are blue,<br>
         i have a question just for you...
