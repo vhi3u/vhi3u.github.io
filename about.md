@@ -4,21 +4,17 @@ title: "about"
 permalink: /about/
 ---
 
-where i post from: chapel hill, charlotte during the offseason.   
+i'm an incoming phd student in ocean science and engineering at georgia tech (starting fall 2026). I recently graduated from the university of north carolina with degrees in applied mathematics and environmental science (highest honors), with a minor in marine science. 
 
-year: 4  
+my undergraduate research ranges from observational physical oceanography (i.e. gliders), coastal ocean modeling, and biogeochemical modeling. check my [research](/research/) page for more info. 
 
-occupation: student
+moving into my phd at georgia tech, i'll be working on understanding biophysical processes that impact carbon and nutrient transport throughout the ocean. particularly, i'm interested in looking at the southern ocean and developing a coupled ocean-atmosphere-biogeochemical model to study processes within this region.
 
-tools: mostly antigravity and matlab nowadays (very brief spell with emacs)
+outside of my research, i enjoy community service work and outreach to bridge science to local communities. i have primarily done this through my involvement with science olympiad (which i competed in as a middle and high schooler), where i've organized outreach and invitational tournaments as president of carolina science olympiad. i'm looking forward to creating and engaging in new service opportunities in atlanta through gt.
 
-major(s): environmental science and applied mathematics  
-minors(s): marine sciences  
+i'm interested in all things relating to (but not limited to): physical oceanography, ocean modeling, marine carbon dioxide removal, carbon markets. feel free to reach out if we share any common interests. 
 
-how did i get here: science olympiad and a dream
+if i'm not working on my research or trying my best to get involved with my local community through STEM outreach, you can find me searching for new restaurants to review on beli, cooking, or re-learning how to play my guitar. 
 
-interests (academic/professional): ocean modeling, physical oceanography, underwater gliders, marine carbon dioxide removal, blue carbon, MRV, carbon credit markets
 
-interests (other things): community service, cooking, birds, soccer, magic the gathering, traveling
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0GsdYf8aMtDnXU6HAjgYMg?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4438JKohTfl2qRJxhIqSEB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
