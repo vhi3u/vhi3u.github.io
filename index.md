@@ -11,7 +11,7 @@ title: victor hieu nguyen
 
     <a href="https://github.com/vhi3u">github</a><br />
     <a href="https://www.linkedin.com/in/victorhieunguyen/">linkedin</a><br />
-    <a href="mailto:vhieu@unc.edu">contact me</a><br />
+    vhieu [at] unc [dot] edu<br />
 
     <pre>
         ,
