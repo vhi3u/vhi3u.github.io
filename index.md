@@ -6,8 +6,7 @@ title: victor hieu nguyen
 <div class="content-clock-wrapper">
   <div class="main-text">
     victor hieu nguyen<br />
-    envsci & math @ unc chapel hill <br />
-    class of 2026<br />
+    ocean science and engineering phd student @ georgia tech (fall 2026)<br />
     <br />
 
     <a href="https://github.com/vhi3u">github</a><br />
