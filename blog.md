@@ -10,7 +10,7 @@ permalink: /blog/
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
-      <span style="color: var(--accent); font-size: 0.9rem;">({{ post.date | date: "%Y.%m.%d" }})</span>
+      <span style="color: var(--accent); font-size: 1em;">[{{ post.date | date: "%Y.%m.%d" }}]</span>
     </li>
   {% endfor %}
 </ul>

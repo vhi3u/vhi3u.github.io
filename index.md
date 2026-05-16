@@ -8,10 +8,11 @@ title: victor hieu nguyen
     victor hieu nguyen<br />
     ocean science and engineering phd student @ georgia tech (fall 2026)<br />
     <br />
-
+    email: vhieu[at]unc[dot]edu<br />
+    <br />
     <a href="https://github.com/vhi3u">github</a><br />
     <a href="https://www.linkedin.com/in/victorhieunguyen/">linkedin</a><br />
-    vhieu[at]unc[dot]edu<br />
+    
 
     <pre>
         ,
