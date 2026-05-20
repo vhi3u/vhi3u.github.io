@@ -4,7 +4,7 @@ title: "about"
 permalink: /about/
 ---
 
-i'm an incoming phd student in ocean science and engineering at georgia tech (starting fall 2026). I recently graduated from the university of north carolina with degrees in applied mathematics and environmental science (highest honors), with a minor in marine science. 
+i'm an incoming phd student in ocean science and engineering at georgia tech (starting fall 2026). i recently graduated from the university of north carolina with degrees in applied mathematics and environmental science (highest honors), with a minor in marine science. 
 
 my undergraduate research ranges from observational physical oceanography (i.e. gliders), coastal ocean modeling, and biogeochemical modeling. check my [research](/research/) page for more info. 
 
