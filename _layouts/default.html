@@ -109,9 +109,10 @@
 
     footer.modeline {
       position: fixed;
-      bottom: 1.5rem;
+      bottom: 0;
       left: 0;
       width: 100%;
+      box-sizing: border-box;
       background: var(--accent);
       color: var(--bg);
       font-family: 'JuliaMono', monospace;
@@ -212,7 +213,7 @@
       playcount: <span id="ordinal">—</span> time
     </div>
     <div class="modeline-segment">
-      ⏰ est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span
+      est: <span id="est-time">--:--</span> | cst: <span id="cst-time">--:--</span> | pst: <span
         id="pst-time">--:--</span>
     </div>
   </footer>
