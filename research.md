@@ -6,7 +6,7 @@ permalink: /research/
 
 <details>
 
-<summary> PEACH </summary>
+<summary> Cape Hatteras hydrodynamic variability </summary>
 
 The Cape Hatteras coastal region off of North Carolina showcases a unique biogeographic boundary, driven by convergent shelfwater flow and influence from the Gulf Stream. Recent Gulf Stream deviations in position, as well as sea level rise north of Cape Hatteras show potential for large shifts in  atmospheric/oceanic forcings, and their effects on shelf and open ocean water exchange is understudied. Furthermore, the varying position of the Hatteras Front, this convergence, signals for a recharacterization of the Cape Hatteras coastal region as more of a "mixing zone" rather than a frontal system. 
 
@@ -21,7 +21,7 @@ You can view my visualization scripts and preliminary figures [here](https://git
 
 <details>
 
-<summary> iLOSCAR </summary>
+<summary> Carbon Dioxide Removal Long-term Impacts on Ocean and Atmosphere </summary>
 
 The burning of fossil fuels since the start of the Industrial Revolution has led to increased CO2 emissions, reaching levels higher than any time in the past 2 million years. In addition to reducing emissions through policy initiatives and transitioning to renewable energy sources, implementing technologies for carbon dioxide removal (CDR) has received growing attention.
 
@@ -35,7 +35,7 @@ More work on iLOSCAR can be found [here](https://github.com/Shihan150/iloscar).
 
 <details>
 
-<summary> SHOAL DYNAMICS </summary>
+<summary> Shoal-flow Interactions </summary>
 
 Wrapping up my work with Dr. Harvey Seim, I have since begun my honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we are looking at how coastal bathymetry can impact fronts, offshore fluxes, and mixing. 
 
