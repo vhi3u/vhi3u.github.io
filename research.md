@@ -4,7 +4,9 @@ title: "research"
 permalink: /research/
 ---
 
-# PEACH
+<details>
+
+<summary> PEACH </summary>
 
 The Cape Hatteras coastal region off of North Carolina showcases a unique biogeographic boundary, driven by convergent shelfwater flow and influence from the Gulf Stream. Recent Gulf Stream deviations in position, as well as sea level rise north of Cape Hatteras show potential for large shifts in  atmospheric/oceanic forcings, and their effects on shelf and open ocean water exchange is understudied. Furthermore, the varying position of the Hatteras Front, this convergence, signals for a recharacterization of the Cape Hatteras coastal region as more of a "mixing zone" rather than a frontal system. 
 
@@ -14,9 +16,12 @@ I am using data collected from PEACH to study the hydrographic variability of th
 
 You can view my visualization scripts and preliminary figures [here](https://github.com/vhi3u/peachVIS).
 
----
+</details>
 
-# iLOSCAR
+
+<details>
+
+<summary> iLOSCAR </summary>
 
 The burning of fossil fuels since the start of the Industrial Revolution has led to increased CO2 emissions, reaching levels higher than any time in the past 2 million years. In addition to reducing emissions through policy initiatives and transitioning to renewable energy sources, implementing technologies for carbon dioxide removal (CDR) has received growing attention.
 
@@ -26,12 +31,16 @@ Our medium for studying this is the **i**nteractive **L**ong-term **O**cean-atmo
 
 More work on iLOSCAR can be found [here](https://github.com/Shihan150/iloscar).
 
----
+</details>
 
-# SHOAL DYNAMICS
+<details>
+
+<summary> SHOAL DYNAMICS </summary>
 
 Wrapping up my work with Dr. Harvey Seim, I have since begun my honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we are looking at how coastal bathymetry can impact fronts, offshore fluxes, and mixing. 
 
 I've always wanted to get more involved in ocean modeling, and with this project we will leverage [Oceananigans.jl](https://clima.github.io/OceananigansDocumentation/stable/) and GPU's for this project. Boundary conditions and coastal bathymetry test cases for the Diamond Shoals (NC) are from [Han et al. (2022)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JC019274) and [GEBCO](https://www.gebco.net/), respectively. 
 
 Excited to share more of this work in the future!
+
+</details>
