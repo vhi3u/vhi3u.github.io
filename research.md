@@ -4,7 +4,7 @@ title: "research"
 permalink: /research/
 ---
 
-<details>
+<details markdown="1">
 
 <summary> Cape Hatteras hydrodynamic variability </summary>
 
@@ -19,7 +19,7 @@ You can view my visualization scripts and preliminary figures [here](https://git
 </details>
 
 
-<details>
+<details markdown="1">
 
 <summary> Carbon Dioxide Removal Long-term Impacts on Ocean and Atmosphere </summary>
 
@@ -33,9 +33,9 @@ More work on iLOSCAR can be found [here](https://github.com/Shihan150/iloscar).
 
 </details>
 
-<details>
+<details markdown="1">
 
-<summary> Shoal-flow Interactions </summary>
+<summary> Shoal-Flow Interactions </summary>
 
 Wrapping up my work with Dr. Harvey Seim, I have since begun my honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we are looking at how coastal bathymetry can impact fronts, offshore fluxes, and mixing. 
 
