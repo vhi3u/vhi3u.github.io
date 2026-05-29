@@ -179,8 +179,8 @@
 
       const name = trackDOM.querySelector("name").textContent;
       const artist = trackDOM.querySelector("artist").textContent;
-      // document.getElementById("trackname").textContent = name.toLowerCase();
-      // document.getElementById("Artist").textContent = artist.toLowerCase();
+      document.getElementById("trackname").textContent = name;
+      document.getElementById("Artist").textContent = artist;
 
       const info = `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&user=${user}&api_key=${api}&track=${encodeURIComponent(name)}&artist=${encodeURIComponent(artist)}`;
       const infoXML = await fetch(info).then(r => r.text());
