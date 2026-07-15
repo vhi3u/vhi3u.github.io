@@ -13,7 +13,7 @@ title: victor hieu nguyen
       School of Earth and Atmospheric Sciences
     </div>
     <div class="profile-image-container">
-      <img src="{{ '/assets/victor-site.jpg' | relative_url }}" alt="Victor Hieu Nguyen" style="height: 145px; width: auto; object-fit: contain;" />
+      <img src="{{ '/assets/victor-site.png' | relative_url }}" alt="Victor Hieu Nguyen" style="height: 145px; width: auto; object-fit: contain;" />
     </div>
   </div>
 
