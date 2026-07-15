@@ -5,13 +5,12 @@ title: victor hieu nguyen
 
 <div class="content-clock-wrapper">
   <div class="main-text">
+    <a href="mailto:vnguyen480@gatech.edu">Email</a> / <a href="https://github.com/vhi3u">Github</a> / <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
     Victor Hieu Nguyen<br />
-    Ocean Science and Engineering PhD Student @ Georgia Tech (Fall 2026)<br />
+    Ocean Science and Engineering PhD Student <br />
+    Georgia Tech School of Earth and Atmospheric Sciences<br />
     <br />
-    Email: vhieu[at]unc[dot]edu<br />
-    <br />
-    <a href="https://github.com/vhi3u">Github</a><br />
-    <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
+    
     
 
     <pre>
