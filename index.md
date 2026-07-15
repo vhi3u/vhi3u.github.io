@@ -8,7 +8,8 @@ title: victor hieu nguyen
     <a href="mailto:vnguyen480@gatech.edu">Email</a> / <a href="https://github.com/vhi3u">Github</a> / <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
     Victor Hieu Nguyen<br />
     Ocean Science and Engineering PhD Student <br />
-    Georgia Tech School of Earth and Atmospheric Sciences<br />
+    Georgia Tech</br>
+    School of Earth and Atmospheric Sciences<br />
     <br />
     
     
@@ -27,6 +28,10 @@ title: victor hieu nguyen
         `'--....(`- ,__..--'
                 '-'`
     </pre>
+  </div>
+
+  <div class="profile-image-container">
+    <img src="{{ '/assets/victor-site.jpg' | relative_url }}" alt="Victor Hieu Nguyen" style="max-width: 250px; border-radius: 50%; object-fit: cover; aspect-ratio: 1/1;" />
   </div>
 
   <!-- NEW wrapper for right-hand block
