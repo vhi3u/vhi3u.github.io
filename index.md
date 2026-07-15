@@ -8,7 +8,7 @@ title: victor hieu nguyen
     <a href="mailto:vnguyen480@gatech.edu">Email</a> / <a href="https://github.com/vhi3u">Github</a> / <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
     Victor Hieu Nguyen<br />
     Ocean Science and Engineering PhD Student <br />
-    Georgia Tech</br>
+    Georgia Tech <br />
     School of Earth and Atmospheric Sciences<br />
     <br />
     
