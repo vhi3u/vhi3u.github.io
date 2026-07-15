@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ▸ title & favicon first so the tab doesn’t flash -->
   <title>{% if page.title %}{{ page.title | downcase }}{% else %}{{ site.title | downcase }}{% endif %}</title>
@@ -151,6 +152,49 @@
       color: var(--bg);
       border-top: 1px solid var(--fg);
       box-shadow: 0 -2px 4px rgba(0, 0, 0, .1);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      body {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+      
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      #theme-toggle {
+        font-size: 1.1rem;
+      }
+
+      .top-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        text-align: center;
+      }
+
+      .profile-image-container img {
+        height: 120px !important;
+      }
+
+      pre {
+        overflow-x: auto;
+        font-size: 0.9rem;
+      }
+
+      footer.modeline {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+      }
+      
+      footer.modeline .modeline-segment {
+        margin: 0.2rem;
+      }
     }
   </style>
 </head>
