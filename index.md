@@ -3,7 +3,7 @@ layout: default
 title: victor hieu nguyen
 ---
 
-<div class="content-wrapper">
+<div class="content-wrapper" markdown="1">
   <div class="top-section" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem;">
     <div class="intro-text" style="flex: 0 0 auto;">
       <a href="mailto:vnguyen480@gatech.edu">Email</a> / <a href="https://github.com/vhi3u">Github</a> / <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
