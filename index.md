@@ -15,12 +15,12 @@ title: victor hieu nguyen
 
   <div style="display: flex; gap: 3rem; align-items: center; margin-bottom: 2rem; justify-content: flex-start; flex-wrap: wrap;">
     <div style="flex: 0 1 600px;">
-      Welcome to my page. I am an Ocean Science and Engineering PhD student at Georgia Tech. I am advised by <a href="https://www.gato-lab.com/">Dr. Lilian Dove</a> and working on regional modeling of the Southern Ocean to study biophysical mechanisms related to Antarctic Winter Water. My graduate studies and research are supported by the National Science Foundation Graduate Research Fellowship.
+      Welcome to my page. I am a PhD student in the <a href="https://ocean.gatech.edu/">Ocean Science and Engineering</a> program at Georgia Tech. I am advised by <a href="https://www.gato-lab.com/">Dr. Lilian Dove</a> and working on regional modeling of the Southern Ocean to study biophysical mechanisms related to Antarctic Winter Water. My graduate studies and research are supported by an <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>.
     </div>
     <img src="{{ '/assets/victor-site.png' | relative_url }}" alt="Victor Hieu Nguyen" style="height: 250px; width: auto; object-fit: contain; flex-shrink: 0;" />
   </div>
 
-  You can find some of my previous work on my [research](/research/) page. Broadly speaking, I am interested in:
+  My previous work is listed on my [research](/research/) page. Broadly speaking, I am interested in:
   - GPU-Based Ocean Modeling
   - Biophysical Ocean Interactions
   - Ocean Carbon Transport
