@@ -18,7 +18,7 @@ title: victor hieu nguyen
 
 Welcome to my page. I am an Ocean Science and Engineering PhD student at Georgia Tech. I am advised by [Dr. Lilian Dove](https://www.gato-lab.com/) and working on regional modeling of the Southern Ocean to study biophysical mechanisms related to Antarctic Winter Water. My graduate studies and research are supported by the National Science Foundation Graduate Research Fellowship.
 
-    </div>
+  </div>
     <img src="{{ '/assets/victor-site.png' | relative_url }}" alt="Victor Hieu Nguyen" style="height: 250px; width: auto; object-fit: contain; flex-shrink: 0;" />
   </div>
 
