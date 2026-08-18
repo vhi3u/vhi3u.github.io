@@ -23,6 +23,10 @@ title: victor hieu nguyen
   - Biophysical Ocean Interactions
   - Ocean Carbon Transport
 
+Outside of my research, I enjoy community service work and outreach to bridge science to local communities. I have primarily done this through my involvement with Science Olympiad (which I competed in as a middle and high schooler), where I've organized outreach and invitational tournaments as president of Carolina Science Olympiad. I'm looking forward to creating and engaging in new service opportunities in Atlanta through GT.
+
+I'm interested in all things relating to (but not limited to): physical oceanography, ocean modeling, marine carbon dioxide removal, carbon markets. Feel free to reach out if we share any common interests. If I'm not working on my research or trying my best to get involved with my local community through STEM outreach, you can find me searching for new restaurants to review on beli, cooking, or re-learning how to play my guitar. 
+
   <div class="ascii-art">
     <pre>
         ,
