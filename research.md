@@ -14,6 +14,11 @@ I joined Dr. Harvey Seim's [Observational Physical Oceanography Lab](https://tar
 
 I am using data collected from PEACH to study the hydrographic variability of the shelf near Cape Hatteras. This study uses underwater Slocum glider to observe the physical and biological characteristics of the water column. 
 
+<figure style="margin: 1em 0; text-align: center;">
+  <video src="{{ '/assets/r6salTempUVL.mp4' | relative_url }}" controls autoplay loop muted playsinline style="max-width: 100%; height: auto;"></video>
+  <figcaption style="font-size: 0.9em; font-style: italic; margin-top: 0.5em;">Glider trajectory for Ramses 6 deployment (September 2018) with salinity (left) and temperature (right) indicated by coloration. Smaller dots represent the temperature/salinity of the lower third of the water column, while the larger outlined circle corresponds to the upper third of the water column. </figcaption>
+</figure>
+
 You can view my visualization scripts and preliminary figures [here](https://github.com/vhi3u/peachVIS).
 
 </details>
@@ -37,10 +42,8 @@ More work on iLOSCAR can be found [here](https://github.com/Shihan150/iloscar).
 
 <summary> <strong>Shoal-Flow Interactions</strong> </summary>
 
-Wrapping up my work with Dr. Harvey Seim, I have since begun my honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we are looking at how coastal bathymetry can impact fronts, offshore fluxes, and mixing. 
+Wrapping up my work with Dr. Harvey Seim, I completed an honors thesis research project in collaboration with Dr. Ken Zhao and the [Carolina Dynamical Oceanography Group](https://unc-ocean-dynamics.github.io/) at UNC. For this project, we study how coastal bathymetry and winds drive offshore transport and eddy kinetic energy. This study uses an idealized hydrostatic model of barotropic flow over a shoal, lightly based off the coastal bathymetry of the Diamond Shoals off of coastal North Carolina. 
 
-I've always wanted to get more involved in ocean modeling, and with this project we will leverage [Oceananigans.jl](https://clima.github.io/OceananigansDocumentation/stable/) and GPU's for this project. Boundary conditions and coastal bathymetry test cases for the Diamond Shoals (NC) are from [Han et al. (2022)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JC019274) and [GEBCO](https://www.gebco.net/), respectively. 
-
-Excited to share more of this work in the future!
+Manuscript in preparation for submission in Journal of Geophysical Research: Oceans. 
 
 </details>
