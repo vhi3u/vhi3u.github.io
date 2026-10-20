@@ -5,13 +5,13 @@ permalink: /research/
 ---
 ## Southern Ocean Biophysical Modeling (GT 2026 - Present)
 
-Presently, I am developing  high-resolution regional model of the Eastern Southern Ocean using NumericalEarth, a modular modeling framework that can simulate the Earth system, using Oceananigans as the ocean component. [This work is advised by Dr. Lilian Dove](https://www.gato-lab.com/team). This model will be used to evaluate the spatiotemporal evolution of Antarctic Winter Water, and how biogeochemical tracers evolve within it. At the moment, I am working on implementing the Biogeochemical Southern Ocean State Estimate (B-SOSE) reanalysis data as boundary conditions for our model. 
+Presently, I am developing  high-resolution regional model of the Eastern Southern Ocean using NumericalEarth, a modular modeling framework that can simulate the Earth system, using Oceananigans as the ocean component. This work is advised by [Dr. Lilian Dove](https://www.gato-lab.com/team). This model will be used to evaluate the spatiotemporal evolution of Antarctic Winter Water, and how biogeochemical tracers evolve within it. At the moment, I am working on implementing the Biogeochemical Southern Ocean State Estimate (B-SOSE) reanalysis data as boundary conditions for our model. 
 
 This work will be partially funded by an NSF Graduate Research Fellowship. 
 
 <figure style="margin: 1em 0; text-align: center;">
   <video src="{{ '/assets/bsose_i156_surface_201406_to_201605.mp4' | relative_url }}" controls autoplay loop muted playsinline style="max-width: 100%; height: auto;"></video>
-  <figcaption style="font-size: 0.9em; font-style: italic; margin-top: 0.5em;">2-year monthly average snapshots of B-SOSE physical fields (temperature, salinity, zonal velocity, and meridional velocity). </figcaption>
+  <figcaption style="font-size: 0.9em; font-style: italic; margin-top: 0.5em;">2-year monthly average snapshots of B-SOSE surface physical fields (temperature, salinity, zonal velocity, and meridional velocity). </figcaption>
 </figure>
 
 

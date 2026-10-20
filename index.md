@@ -20,7 +20,7 @@ title: victor hieu nguyen
     <img src="{{ '/assets/victor-site.png' | relative_url }}" alt="Victor Hieu Nguyen" style="height: 250px; width: auto; object-fit: contain; flex-shrink: 0;" />
   </div>
 
-  My previous work is listed on my [research](/research/) page. Broadly speaking, I am interested in:
+  My past and current work is listed on my [research](/research/) page. Broadly speaking, I am interested in:
   - GPU-Based Ocean Modeling
   - Biophysical Ocean Interactions
   - Ocean Carbon Transport
