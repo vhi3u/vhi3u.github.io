@@ -3,12 +3,12 @@ layout: default
 title: victor hieu nguyen
 ---
 
+{% include banner.html %}
+
 <div class="content-wrapper" markdown="1">
   <div class="top-section" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem;">
     <div class="intro-text" style="flex: 0 0 auto;">
       <a href="mailto:vnguyen480@gatech.edu">Email</a> / <a href="https://github.com/vhi3u">Github</a> / <a href="https://www.linkedin.com/in/victorhieunguyen/">LinkedIn</a><br />
-      Victor Hieu Nguyen<br />
-      He/Him <br />
       Atlanta, GA
     </div>
   </div>
@@ -42,3 +42,5 @@ title: victor hieu nguyen
     </pre>
   </div>
 </div>
+
+<p style="font-size: 0.8em; opacity: 0.6; margin-top: 2rem;">Acknowledgement: the code used to create the animated name banner is forked from <a href="https://github.com/wenegrat/group-logo">Dr. Jacob Wenegrat's group logo code</a>.</p>

@@ -1,0 +1,72 @@
+<!--
+  Animated banner for the top of the front page of vhi3u.github.io (copy to _includes/banner.html
+  and include it first in index.md).
+  Files (built by scripts/make_banner.sh, copied to the site's assets/banner/):
+    trails.webm        trails-only video, VP9 with alpha (Chrome, Firefox, Edge)
+    trails_hevc.mov    trails-only video, HEVC with alpha (Safari)
+    letters.webp       "VICTOR HIEU NGUYEN" lettering, transparent
+    still.webp         one trails frame, shown instead of the video to visitors who prefer reduced motion
+    box_curve.json     darkness of the background box per video frame (scripts/box_curve.py)
+  Layers, back to front: a soft dark box (opacity follows the animation), the trails video, the
+  lettering. The lettering is a separate image so it stays sharp; it is aligned with the video
+  because both cover the full banner area.
+  Size: --od-name is the width of the lettering. It is in em, so it scales with the site's font
+  size, and never wider than the text column. The banner is wider than the lettering (open water on
+  each side, 10.76% of the banner on the left, 78.48% lettering) and is shifted left so the
+  lettering starts at the text's left edge; the water outside the column is clipped at the screen
+  edges. Percent margins refer to the column width, so all offsets below are fractions of it.
+  Themes: the files are white (for the site's default dark theme). With the `light-theme` class
+  on <html>, the trails and lettering are inverted to black and the box turns light.
+-->
+<style>
+  body { overflow-x: clip; }
+  /* page content paints above the banner's faded lower edge, which it overlaps */
+  .content-wrapper { position: relative; }
+  .od-banner { --od-name: min(100%, 36em);
+               position: relative; pointer-events: none; aspect-ratio: 818 / 240;   /* model grid Nx / Ny */
+               width: calc(var(--od-name) / 0.7848);
+               margin-left: calc(var(--od-name) * -0.1371);
+               margin-top: -1.5rem;
+               margin-bottom: calc(var(--od-name) * -0.0748); }     /* 20% of the banner height (faded water) */
+  .od-banner .od-box { position: absolute; left: -3%; right: -3%; top: -6%; bottom: -6%; opacity: 0;
+                       border-radius: 90px; background: rgba(5, 20, 30, 0.82); filter: blur(80px);
+                       transition: background-color 0.3s ease; }
+  .od-banner video, .od-banner img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+  @media (max-width: 768px) {
+    .od-banner { margin-top: -1rem; }
+    .od-banner .od-box { filter: blur(28px); border-radius: 40px; }
+  }
+  /* Light theme: black trails and lettering on a light box (inverting keeps the alpha) */
+  .od-banner video, .od-banner img { transition: filter 0.3s ease; }
+  .light-theme .od-banner video, .light-theme .od-banner img { filter: invert(1); }
+  .light-theme .od-banner .od-box { background: rgba(250, 251, 253, 0.82); }
+</style>
+<div class="od-banner" aria-hidden="true">
+  <div class="od-box" id="od-box"></div>
+  <video id="od-video" muted loop playsinline></video>
+  <img src="/assets/banner/letters.webp" alt="">
+</div>
+<script>
+  (function () {
+    var v = document.getElementById('od-video'), box = document.getElementById('od-box'), fps = 10;
+    // Reduced motion: a still frame at full development instead of the video
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      v.poster = '/assets/banner/still.webp'; box.style.opacity = 1; return;
+    }
+    // Safari plays HEVC with alpha; other browsers play VP9 with alpha
+    var isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent);
+    v.src = isSafari ? '/assets/banner/trails_hevc.mov' : '/assets/banner/trails.webm';
+    v.autoplay = true;
+    v.play && v.play().catch(function () {});
+    // Box darkness follows the video's playback position
+    fetch('/assets/banner/box_curve.json').then(function (r) { return r.json(); }).then(function (curve) {
+      function tick() {
+        var x = v.currentTime * fps, i = Math.floor(x), f = x - i;
+        var a = curve[Math.min(i, curve.length - 1)], b = curve[Math.min(i + 1, curve.length - 1)];
+        box.style.opacity = (a + (b - a) * f).toFixed(3);
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  })();
+</script>
